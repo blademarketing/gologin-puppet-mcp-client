@@ -9,6 +9,7 @@
 
 const { Server } = require('@modelcontextprotocol/sdk/server/index.js');
 const { StdioServerTransport } = require('@modelcontextprotocol/sdk/server/stdio.js');
+const { ListToolsRequestSchema, CallToolRequestSchema } = require('@modelcontextprotocol/sdk/types.js');
 
 // Configuration
 const BRIDGE_URL = process.env.BRIDGE_URL || 'http://94.237.49.107:3001';
@@ -30,7 +31,7 @@ class BridgeProxyServer {
     setupHandlers() {
         // Handle list tools request
         this.server.setRequestHandler(
-            { method: 'tools/list' },
+            ListToolsRequestSchema,
             async () => {
                 try {
                     const response = await fetch(`${BRIDGE_URL}/tools`);
@@ -50,7 +51,7 @@ class BridgeProxyServer {
 
         // Handle call tool request
         this.server.setRequestHandler(
-            { method: 'tools/call' },
+            CallToolRequestSchema,
             async (request) => {
                 try {
                     const { name, arguments: args } = request.params;
