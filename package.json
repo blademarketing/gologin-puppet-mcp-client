@@ -2,9 +2,10 @@
   "name": "gologin-puppet-mcp-client",
   "version": "1.0.0",
   "description": "MCP client for GoLogin Puppet browser automation",
-  "main": "flowise-client.js",
+  "main": "index.js",
   "bin": {
-    "gologin-puppet-mcp-client": "./flowise-client.js"
+    "gologin-puppet-mcp-client": "./flowise-client.js",
+    "gologin-puppet-mcp": "./flowise-client.js"
   },
   "type": "commonjs",
   "scripts": {
