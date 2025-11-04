@@ -1,18 +1,35 @@
 {
-  "name": "gologin-puppet-mcp-bridge",
+  "name": "gologin-puppet-mcp-client",
   "version": "1.0.0",
-  "description": "HTTP bridge for GoLogin Puppet MCP server",
-  "main": "server.js",
+  "description": "MCP client for GoLogin Puppet browser automation",
+  "main": "flowise-client.js",
+  "bin": {
+    "gologin-puppet-mcp-client": "./flowise-client.js"
+  },
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js",
+    "start": "node flowise-client.js",
+    "start-bridge": "node server.js",
     "dev": "nodemon server.js"
   },
+  "keywords": [
+    "mcp",
+    "gologin",
+    "browser-automation",
+    "puppeteer",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
     "express": "^4.18.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/gologin-puppet-mcp-client.git"
   }
 }
