@@ -12,7 +12,7 @@ const { StdioServerTransport } = require('@modelcontextprotocol/sdk/server/stdio
 const { ListToolsRequestSchema, CallToolRequestSchema } = require('@modelcontextprotocol/sdk/types.js');
 
 // Configuration
-const BRIDGE_URL = process.env.BRIDGE_URL || 'http://172.236.1.251:3002';
+const BRIDGE_URL = process.env.BRIDGE_URL || 'http://nirostools.com:3002';
 
 class BridgeProxyServer {
     constructor() {
